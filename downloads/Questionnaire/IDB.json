@@ -1,0 +1,691 @@
+{
+  "Translations": [],
+  "Categories": [],
+  "Id": "4a478d6c153c42c1a44214d996d1169b",
+  "Revision": 41,
+  "IsRoster": false,
+  "QuestionnaireId": {
+    "Id": "cd7185a42a484003b5e2254ba4a5452a$1"
+  },
+  "DatabaseStructure": {},
+  "IsDeleted": false,
+  "RosterSizeQuestionId": null,
+  "RosterSizeSource": 0,
+  "IsFixedRoster": false,
+  "Parent": null,
+  "FixedRosterTitles": [],
+  "VariableName": "IDB",
+  "Title": "MANEJO DE COMPLICACIONES OBSTÉTRICAS POR HEMORRAGIA",
+  "RosterTitleQuestionId": null,
+  "PublicKey": "cd7185a4-2a48-4003-b5e2-254ba4a5452a",
+  "Children": [
+    {
+      "IsRoster": false,
+      "RosterSizeQuestionId": null,
+      "RosterSizeSource": 0,
+      "IsFixedRoster": false,
+      "FixedRosterTitles": [],
+      "VariableName": "",
+      "Title": "Identificación de expediente",
+      "RosterTitleQuestionId": null,
+      "PublicKey": "f6930c20-8ef8-42a7-83ad-120c46b71f9c",
+      "Children": [
+        {
+          "QuestionType": 7,
+          "Featured": true,
+          "VariableName": "expediente",
+          "VariableLabel": "Expediente ID",
+          "QuestionText": "Número de expediente clínico",
+          "Answers": [],
+          "LinkedToQuestionId": null,
+          "LinkedToRosterId": null,
+          "PublicKey": "b55f6f19-c2cd-2a57-29ff-1219b5e4ebd3",
+          "Children": [],
+          "ValidationConditions": [],
+          "Instructions": "Ingresa el número de expediente del paciente (4 dígitos)",
+          "ColumnName": "expediente"
+        }
+      ],
+      "HasAnyExportableChild": true,
+      "TableName": "IDB$1",
+      "EnablementTableName": "IDB$1-e",
+      "ValidityTableName": "IDB$1-v",
+      "DoesSupportDataTable": true,
+      "DoesSupportEnablementTable": true,
+      "DoesSupportValidityTable": true,
+      "IsInsideRoster": false,
+      "ColumnName": "f6930c20-8ef8-42a7-83ad-120c46b71f9c"
+    },
+    {
+      "IsRoster": false,
+      "RosterSizeQuestionId": null,
+      "RosterSizeSource": 0,
+      "IsFixedRoster": false,
+      "FixedRosterTitles": [],
+      "VariableName": "",
+      "Title": "Datos básicos de la paciente",
+      "RosterTitleQuestionId": null,
+      "PublicKey": "d447c5cb-ae44-c10f-e7f0-6027cccb89f8",
+      "Children": [
+        {
+          "IsInteger": true,
+          "QuestionType": 4,
+          "Featured": false,
+          "VariableName": "edad",
+          "VariableLabel": "Edad",
+          "QuestionText": "Edad",
+          "Answers": [],
+          "LinkedToQuestionId": null,
+          "LinkedToRosterId": null,
+          "PublicKey": "e206382d-80a1-da4e-3296-a5e1d264550f",
+          "Children": [],
+          "ValidationConditions": [
+            {
+              "Expression": "(self>5 & self < 110) | self==-99",
+              "Message": "Verifica la edad reportada.",
+              "Severity": 0
+            }
+          ],
+          "Instructions": "Digite el número de años ya cumplidos. \nDigite -99 si se desconoce.",
+          "ColumnName": "edad"
+        },
+        {
+          "IsInteger": true,
+          "QuestionType": 4,
+          "Featured": false,
+          "VariableName": "edad_gesta",
+          "VariableLabel": "Edad gestacional",
+          "QuestionText": "Edad gestacional del embrión",
+          "Answers": [],
+          "LinkedToQuestionId": null,
+          "LinkedToRosterId": null,
+          "PublicKey": "1b18121a-380b-e5e3-2fc6-c21c1e37741c",
+          "Children": [],
+          "ValidationConditions": [
+            {
+              "Expression": "(self>=0 & self<43) | self==-99",
+              "Message": "Verifica la edad gestacional reportada.",
+              "Severity": 0
+            }
+          ],
+          "Instructions": "Digite el número de semanas completas. \nDigite -99 si se desconoce",
+          "ColumnName": "edad_gesta"
+        },
+        {
+          "CategoriesId": null,
+          "QuestionType": 0,
+          "Featured": false,
+          "VariableName": "causas",
+          "VariableLabel": "causas hemorragia",
+          "QuestionText": "Confirme la causa de las complicaciones obstétricas por hemorragia.",
+          "Answers": [
+            {
+              "AnswerText": "Aborto inevitable en curso o incompleto",
+              "AnswerValue": "1"
+            },
+            {
+              "AnswerText": "Embarazo ectópico complicado",
+              "AnswerValue": "2"
+            },
+            {
+              "AnswerText": "Ruptura uterina",
+              "AnswerValue": "3"
+            },
+            {
+              "AnswerText": "Otros",
+              "AnswerValue": "-96"
+            },
+            {
+              "AnswerText": "Desconocida",
+              "AnswerValue": "-99"
+            }
+          ],
+          "LinkedToQuestionId": null,
+          "LinkedToRosterId": null,
+          "PublicKey": "cc828b46-e7f6-90c5-9724-806b6a256548",
+          "Children": [],
+          "ValidationConditions": [],
+          "Instructions": "",
+          "ColumnName": "causas"
+        },
+        {
+          "QuestionType": 7,
+          "Featured": false,
+          "VariableName": "causas_otras",
+          "VariableLabel": "Otras causas",
+          "QuestionText": "Especifique la causa de la hemorragia",
+          "Answers": [],
+          "LinkedToQuestionId": null,
+          "LinkedToRosterId": null,
+          "PublicKey": "41e304d0-0a59-c0cc-3b89-23c046dc0ae8",
+          "Children": [],
+          "ValidationConditions": [],
+          "Instructions": "",
+          "ColumnName": "causas_otras"
+        }
+      ],
+      "HasAnyExportableChild": true,
+      "TableName": "IDB$1",
+      "EnablementTableName": "IDB$1-e",
+      "ValidityTableName": "IDB$1-v",
+      "DoesSupportDataTable": true,
+      "DoesSupportEnablementTable": true,
+      "DoesSupportValidityTable": true,
+      "IsInsideRoster": false,
+      "ColumnName": "d447c5cb-ae44-c10f-e7f0-6027cccb89f8"
+    },
+    {
+      "IsRoster": false,
+      "RosterSizeQuestionId": null,
+      "RosterSizeSource": 0,
+      "IsFixedRoster": false,
+      "FixedRosterTitles": [],
+      "VariableName": "",
+      "Title": "Manejo de complicaciones",
+      "RosterTitleQuestionId": null,
+      "PublicKey": "19c1518d-4a17-4b19-ab1b-a7583ee7e730",
+      "Children": [
+        {
+          "PublicKey": "aa9d185e-254b-0039-0728-43c0413cf99e",
+          "Children": [],
+          "Type": 5,
+          "Name": "positivo",
+          "Label": "Texto en caso de reportar",
+          "Expression": "\"SI\"",
+          "DoNotExport": false,
+          "ColumnName": "positivo",
+          "IsExportable": true
+        },
+        {
+          "PublicKey": "3c29d4d4-ca32-5b2a-b6f2-9876ab6be7c1",
+          "Children": [],
+          "Type": 5,
+          "Name": "negativo",
+          "Label": "Texto en caso de NO reportar",
+          "Expression": "\"NO *\"",
+          "DoNotExport": false,
+          "ColumnName": "negativo",
+          "IsExportable": true
+        },
+        {
+          "PublicKey": "7d197226-61d6-22e0-b388-b8005d1e9249",
+          "Children": [],
+          "Type": 5,
+          "Name": "sin_respuesta",
+          "Label": "Texto en caso de MISSING",
+          "Expression": "\"SIN RESPUESTA **\"",
+          "DoNotExport": false,
+          "ColumnName": "sin_respuesta",
+          "IsExportable": true
+        },
+        {
+          "PublicKey": "23cdf4d6-1edf-ba1b-0e1f-11ee6b470e68",
+          "Children": [],
+          "Type": 5,
+          "Name": "no_hace_falta",
+          "Label": "Texto en caso de NO HACER FALTA",
+          "Expression": "\"NO APLICA\"",
+          "DoNotExport": false,
+          "ColumnName": "no_hace_falta",
+          "IsExportable": true
+        },
+        {
+          "YesNoView": false,
+          "AreAnswersOrdered": false,
+          "IsFilteredCombobox": false,
+          "CategoriesId": null,
+          "MaxAllowedAnswers": null,
+          "QuestionType": 3,
+          "Featured": false,
+          "VariableName": "general",
+          "VariableLabel": "general",
+          "QuestionText": "SELECCIONA TODAS LAS MEDICIONES QUE LE FUERON REALIZADAS A LA PACIENTE",
+          "Answers": [
+            {
+              "AnswerText": "Presión arterial",
+              "AnswerValue": "1"
+            },
+            {
+              "AnswerText": "Pulso",
+              "AnswerValue": "2"
+            },
+            {
+              "AnswerText": "Frecuencia respiratoria",
+              "AnswerValue": "3"
+            }
+          ],
+          "LinkedToQuestionId": null,
+          "LinkedToRosterId": null,
+          "PublicKey": "e1f889ae-804e-2506-248e-8bc12c752cde",
+          "Children": [],
+          "ValidationConditions": [],
+          "Instructions": "",
+          "ColumnName": "general"
+        },
+        {
+          "PublicKey": "768465e7-1c11-7cc4-62df-45c2911049ed",
+          "Children": [],
+          "Type": 5,
+          "Name": "txt_presion",
+          "Label": "texto presion",
+          "Expression": "!IsAnswered(general) ? sin_respuesta :\ngeneral.Contains(1) ? positivo:\nnegativo",
+          "DoNotExport": false,
+          "ColumnName": "txt_presion",
+          "IsExportable": true
+        },
+        {
+          "PublicKey": "8605da17-d5d7-9572-722b-333cf2058238",
+          "Children": [],
+          "Type": 5,
+          "Name": "txt_pulso",
+          "Label": "texto pulso",
+          "Expression": "!IsAnswered(general) ? sin_respuesta :\ngeneral.Contains(2) ? positivo :\nnegativo",
+          "DoNotExport": false,
+          "ColumnName": "txt_pulso",
+          "IsExportable": true
+        },
+        {
+          "PublicKey": "08e1a399-3056-ffc1-2803-0ceaecc54efb",
+          "Children": [],
+          "Type": 5,
+          "Name": "txt_freq",
+          "Label": "texto frecuencia",
+          "Expression": "!IsAnswered(general) ? sin_respuesta :\ngeneral.Contains(3) ? positivo:\nnegativo",
+          "DoNotExport": false,
+          "ColumnName": "txt_freq",
+          "IsExportable": true
+        },
+        {
+          "YesNoView": false,
+          "AreAnswersOrdered": false,
+          "IsFilteredCombobox": false,
+          "CategoriesId": null,
+          "MaxAllowedAnswers": null,
+          "QuestionType": 3,
+          "Featured": false,
+          "VariableName": "laboratorio",
+          "VariableLabel": "Examenes de laboratorio",
+          "QuestionText": "SELECCIONA TODOS LOS EXÁMENES DE LABORATORIO REALIZADOS A LA PACIENTE",
+          "Answers": [
+            {
+              "AnswerText": "Hemograma + Plaquetas",
+              "AnswerValue": "1"
+            },
+            {
+              "AnswerText": "Tipificación sanguínea",
+              "AnswerValue": "2"
+            }
+          ],
+          "LinkedToQuestionId": null,
+          "LinkedToRosterId": null,
+          "PublicKey": "e613d213-6dee-2e77-8076-f2750a44bcb3",
+          "Children": [],
+          "ValidationConditions": [],
+          "Instructions": "",
+          "ColumnName": "laboratorio"
+        },
+        {
+          "PublicKey": "274ea3af-32c8-1278-74ca-ad1143620b9c",
+          "Children": [],
+          "Type": 5,
+          "Name": "txt_hemograma",
+          "Label": "texto hemograma",
+          "Expression": "!IsAnswered(laboratorio) ? sin_respuesta :\nlaboratorio.Contains(1) ? positivo:\nnegativo",
+          "DoNotExport": false,
+          "ColumnName": "txt_hemograma",
+          "IsExportable": true
+        },
+        {
+          "PublicKey": "176f2dab-ccd2-e129-2a4a-205a536c4138",
+          "Children": [],
+          "Type": 5,
+          "Name": "txt_tipif",
+          "Label": "texto tipificacion",
+          "Expression": "!IsAnswered(laboratorio) ? sin_respuesta :\nlaboratorio.Contains(2) ? positivo:\nnegativo",
+          "DoNotExport": false,
+          "ColumnName": "txt_tipif",
+          "IsExportable": true
+        },
+        {
+          "YesNoView": false,
+          "AreAnswersOrdered": false,
+          "IsFilteredCombobox": false,
+          "CategoriesId": null,
+          "MaxAllowedAnswers": null,
+          "QuestionType": 3,
+          "Featured": false,
+          "VariableName": "manejo",
+          "VariableLabel": "Examenes de laboratorio",
+          "QuestionText": "SELECCIONA TODOS LOS COMPONENTES QUE SE ADMINISTRARON A LA PACIENTE",
+          "Answers": [
+            {
+              "AnswerText": "Oxígeno vía catéter",
+              "AnswerValue": "1"
+            },
+            {
+              "AnswerText": "Soluciones isotónicas calentadas",
+              "AnswerValue": "2"
+            },
+            {
+              "AnswerText": "Transfusión si hemoglobina <7.5",
+              "AnswerValue": "3"
+            }
+          ],
+          "LinkedToQuestionId": null,
+          "LinkedToRosterId": null,
+          "PublicKey": "c872774a-d2d4-06f5-2b9b-40b53af0d168",
+          "Children": [],
+          "ValidationConditions": [],
+          "Instructions": "",
+          "ColumnName": "manejo"
+        },
+        {
+          "PublicKey": "28997478-cd2e-4ec1-aab9-33dfd1472369",
+          "Children": [],
+          "Type": 5,
+          "Name": "txt_cateter",
+          "Label": "texto cateter",
+          "Expression": "!IsAnswered(manejo) ? sin_respuesta :\nmanejo.Contains(1) ? positivo:\nnegativo",
+          "DoNotExport": false,
+          "ColumnName": "txt_cateter",
+          "IsExportable": true
+        },
+        {
+          "PublicKey": "5787564c-d693-0c45-2779-844bd564ece7",
+          "Children": [],
+          "Type": 5,
+          "Name": "txt_soluciones",
+          "Label": "texto soluciones",
+          "Expression": "!IsAnswered(laboratorio) ? sin_respuesta :\nlaboratorio.Contains(2) ? positivo:\nnegativo",
+          "DoNotExport": false,
+          "ColumnName": "txt_soluciones",
+          "IsExportable": true
+        },
+        {
+          "PublicKey": "d9787c6b-ba73-e48e-cda5-aefecd67d8f5",
+          "Children": [],
+          "Type": 5,
+          "Name": "txt_hemoglobina",
+          "Label": "texto hemograma",
+          "Expression": "!IsAnswered(laboratorio) ? sin_respuesta :\nlaboratorio.Contains(3) ? positivo:\nnegativo",
+          "DoNotExport": false,
+          "ColumnName": "txt_hemoglobina",
+          "IsExportable": true
+        },
+        {
+          "PublicKey": "fd106d9b-81b3-3b61-04b4-743eb6f519fb",
+          "Children": [],
+          "Type": 5,
+          "Name": "txt_aborto",
+          "Label": "texto aborto",
+          "Expression": "!IsAnswered(causas) ? sin_respuesta :\ncausas == 1 ? positivo:\nnegativo",
+          "DoNotExport": false,
+          "ColumnName": "txt_aborto",
+          "IsExportable": true
+        },
+        {
+          "PublicKey": "a6c1c274-3d23-ae2e-98eb-6335512e89fb",
+          "Children": [],
+          "Type": 5,
+          "Name": "txt_ectopico",
+          "Label": "texto ectopico",
+          "Expression": "!IsAnswered(causas) ? sin_respuesta :\ncausas == 2 ? positivo:\nnegativo",
+          "DoNotExport": false,
+          "ColumnName": "txt_ectopico",
+          "IsExportable": true
+        },
+        {
+          "PublicKey": "6d9115d5-d8ff-f8c9-1095-cb468a9a26b9",
+          "Children": [],
+          "Type": 5,
+          "Name": "txt_ruptura",
+          "Label": "texto ruptura",
+          "Expression": "!IsAnswered(causas) ? sin_respuesta :\ncausas == 3 ? positivo:\nnegativo",
+          "DoNotExport": false,
+          "ColumnName": "txt_ruptura",
+          "IsExportable": true
+        },
+        {
+          "PublicKey": "044ac3a3-248f-e0a7-6701-8f2372baf927",
+          "Children": [],
+          "Type": 3,
+          "Name": "filro_procedimientos",
+          "Label": "filtro para seccion de procedimientos",
+          "Expression": "causas == 1 | causas == 2 | causas == 3",
+          "DoNotExport": false,
+          "ColumnName": "filro_procedimientos",
+          "IsExportable": true
+        },
+        {
+          "PublicKey": "97214f14-c070-0210-fba5-9c52dfbc3a14",
+          "Children": [],
+          "Type": 5,
+          "Name": "txt_evacuacion",
+          "Label": "texto evacuacion",
+          "Expression": "(filro_procedimientos == false) ? no_hace_falta:\n(filro_procedimientos==true && causas!=1) ? no_hace_falta:\n(causas==1 && !IsAnswered(evacuacion)) ? sin_respuesta :\nevacuacion !=0 ? positivo:\nnegativo",
+          "DoNotExport": false,
+          "ColumnName": "txt_evacuacion",
+          "IsExportable": true
+        },
+        {
+          "PublicKey": "64292661-036c-9a52-1436-4120fd946bf0",
+          "Children": [],
+          "Type": 5,
+          "Name": "txt_laparoscopia",
+          "Label": "texto laparascopia",
+          "Expression": "(filro_procedimientos == false) ? no_hace_falta:\n(filro_procedimientos==true && causas!=2) ? no_hace_falta:\n(causas==2 && !IsAnswered(parascopia)) ? sin_respuesta :\nparascopia !=0 ? positivo:\nnegativo",
+          "DoNotExport": false,
+          "ColumnName": "txt_laparoscopia",
+          "IsExportable": true
+        },
+        {
+          "PublicKey": "d364fa79-ca96-8270-f210-1437475192cc",
+          "Children": [],
+          "Type": 5,
+          "Name": "txt_cesarea",
+          "Label": "texto cesarea",
+          "Expression": "(filro_procedimientos == false) ? no_hace_falta:\n(filro_procedimientos==true && causas!=3) ? no_hace_falta:\n(causas==3 && !IsAnswered(cesarea)) ? sin_respuesta :\ncesarea !=0? positivo:\nnegativo",
+          "DoNotExport": false,
+          "ColumnName": "txt_cesarea",
+          "IsExportable": true
+        }
+      ],
+      "HasAnyExportableChild": true,
+      "TableName": "IDB$1",
+      "EnablementTableName": "IDB$1-e",
+      "ValidityTableName": "IDB$1-v",
+      "DoesSupportDataTable": true,
+      "DoesSupportEnablementTable": true,
+      "DoesSupportValidityTable": true,
+      "IsInsideRoster": false,
+      "ColumnName": "19c1518d-4a17-4b19-ab1b-a7583ee7e730"
+    },
+    {
+      "IsRoster": false,
+      "RosterSizeQuestionId": null,
+      "RosterSizeSource": 0,
+      "IsFixedRoster": false,
+      "FixedRosterTitles": [],
+      "VariableName": "",
+      "Title": "Procedimientos",
+      "RosterTitleQuestionId": null,
+      "PublicKey": "711ddf77-bdaa-8e0e-30ba-705ba1119dc8",
+      "Children": [
+        {
+          "CategoriesId": null,
+          "QuestionType": 0,
+          "Featured": false,
+          "VariableName": "evacuacion",
+          "VariableLabel": "Evacuacion uterina",
+          "QuestionText": "¿Se realizó alguno de los siguientes procedimientos?",
+          "Answers": [
+            {
+              "AnswerText": "Evacuación uterina por aspiración manual endouterina (AMEU)",
+              "AnswerValue": "1"
+            },
+            {
+              "AnswerText": "Legrado instrumental uterino (LIU)?",
+              "AnswerValue": "2"
+            },
+            {
+              "AnswerText": "Ninguno de los anteriores",
+              "AnswerValue": "0"
+            }
+          ],
+          "LinkedToQuestionId": null,
+          "LinkedToRosterId": null,
+          "PublicKey": "616e76cc-95a0-edc2-7023-bbe55c4c9bd4",
+          "Children": [],
+          "ValidationConditions": [],
+          "Instructions": "",
+          "ColumnName": "evacuacion"
+        },
+        {
+          "CategoriesId": null,
+          "QuestionType": 0,
+          "Featured": false,
+          "VariableName": "parascopia",
+          "VariableLabel": "Laparoscopia o laparotomia",
+          "QuestionText": "¿Se realizó alguno de los siguientes procedimientos?",
+          "Answers": [
+            {
+              "AnswerText": "Laparoscopia",
+              "AnswerValue": "1"
+            },
+            {
+              "AnswerText": "Laparotomia",
+              "AnswerValue": "2"
+            },
+            {
+              "AnswerText": "Ninguno de los anteriores",
+              "AnswerValue": "0"
+            }
+          ],
+          "LinkedToQuestionId": null,
+          "LinkedToRosterId": null,
+          "PublicKey": "371a48a9-6d17-6a52-b89e-a76fd2753c03",
+          "Children": [],
+          "ValidationConditions": [],
+          "Instructions": "",
+          "ColumnName": "parascopia"
+        },
+        {
+          "CategoriesId": null,
+          "QuestionType": 0,
+          "Featured": false,
+          "VariableName": "cesarea",
+          "VariableLabel": "Manejo expectante o parto vía vaginal o cesárea",
+          "QuestionText": "¿Se realizó alguno de los siguientes procedimientos?",
+          "Answers": [
+            {
+              "AnswerText": "Manejo expectante",
+              "AnswerValue": "1"
+            },
+            {
+              "AnswerText": "Parto vía vaginal",
+              "AnswerValue": "2"
+            },
+            {
+              "AnswerText": "Cesárea",
+              "AnswerValue": "3"
+            },
+            {
+              "AnswerText": "Ninguno de los anteriores",
+              "AnswerValue": "0"
+            }
+          ],
+          "LinkedToQuestionId": null,
+          "LinkedToRosterId": null,
+          "PublicKey": "a3eb3199-f8ab-3e1e-ac45-23313dc5d1ac",
+          "Children": [],
+          "ValidationConditions": [],
+          "Instructions": "",
+          "ColumnName": "cesarea"
+        }
+      ],
+      "HasAnyExportableChild": true,
+      "TableName": "IDB$1",
+      "EnablementTableName": "IDB$1-e",
+      "ValidityTableName": "IDB$1-v",
+      "DoesSupportDataTable": true,
+      "DoesSupportEnablementTable": true,
+      "DoesSupportValidityTable": true,
+      "IsInsideRoster": false,
+      "ColumnName": "711ddf77-bdaa-8e0e-30ba-705ba1119dc8"
+    },
+    {
+      "IsRoster": false,
+      "RosterSizeQuestionId": null,
+      "RosterSizeSource": 0,
+      "IsFixedRoster": false,
+      "FixedRosterTitles": [],
+      "VariableName": "",
+      "Title": "Resumen de la información registrada",
+      "RosterTitleQuestionId": null,
+      "PublicKey": "a343d9d8-9573-ed4e-424e-e07fc55ef5c6",
+      "Children": [
+        {
+          "PublicKey": "4a48d544-f75b-8f9b-99a4-789d3f46a88e",
+          "Children": [],
+          "ValidationConditions": [],
+          "ColumnName": "4a48d544-f75b-8f9b-99a4-789d3f46a88e"
+        },
+        {
+          "PublicKey": "9d8d0b5d-16a5-2eea-4025-7eb6ab02e3ce",
+          "Children": [],
+          "ValidationConditions": [],
+          "ColumnName": "9d8d0b5d-16a5-2eea-4025-7eb6ab02e3ce"
+        },
+        {
+          "CategoriesId": null,
+          "QuestionType": 0,
+          "Featured": false,
+          "VariableName": "verificacion",
+          "VariableLabel": "Confirmacion de que expediente es correcto",
+          "QuestionText": "¿Confirmas que la información registrada es correcta?",
+          "Answers": [
+            {
+              "AnswerText": "Si",
+              "AnswerValue": "1"
+            },
+            {
+              "AnswerText": "No",
+              "AnswerValue": "2"
+            }
+          ],
+          "LinkedToQuestionId": null,
+          "LinkedToRosterId": null,
+          "PublicKey": "0354e29f-f8d6-b96a-f5fe-29a97601c262",
+          "Children": [],
+          "ValidationConditions": [
+            {
+              "Expression": "self == 1",
+              "Message": "Recuerda que puedes corregir la información en caso de que algún dato no sea correcto.",
+              "Severity": 0
+            }
+          ],
+          "Instructions": "",
+          "ColumnName": "verificacion"
+        }
+      ],
+      "HasAnyExportableChild": true,
+      "TableName": "IDB$1",
+      "EnablementTableName": "IDB$1-e",
+      "ValidityTableName": "IDB$1-v",
+      "DoesSupportDataTable": true,
+      "DoesSupportEnablementTable": true,
+      "DoesSupportValidityTable": true,
+      "IsInsideRoster": false,
+      "ColumnName": "a343d9d8-9573-ed4e-424e-e07fc55ef5c6"
+    }
+  ],
+  "HasAnyExportableChild": true,
+  "TableName": "IDB$1",
+  "EnablementTableName": "IDB$1-e",
+  "ValidityTableName": "IDB$1-v",
+  "DoesSupportDataTable": false,
+  "DoesSupportEnablementTable": false,
+  "DoesSupportValidityTable": false,
+  "IsInsideRoster": false,
+  "ColumnName": "idb"
+}
