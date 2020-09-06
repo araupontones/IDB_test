@@ -14,7 +14,7 @@ vars_drop = c("positivo", "negativo", "sin_respuesta",
 #numero de criterios a realizar
 
 num_criterios = 8
-df_raw = import(file.path(dir_downloads, questionnaire)) %>%
+df_raw = import(file.path(downloadDir, questionnaire)) %>%
   mutate(across(all_of(c("causas", "interview__status")), fn_labels)) %>%
   select(-vars_drop, -starts_with("txt_")) %>%
   rename(m_presion = general__1,
@@ -36,4 +36,5 @@ df_raw = import(file.path(dir_downloads, questionnaire)) %>%
 #crear grafica de numero de criterios realizados por caso
 source("R/3.grafica_criterios.R")
 source("R/4.grafica_monitoria.R")
+
 

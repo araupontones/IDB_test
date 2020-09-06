@@ -54,7 +54,7 @@ response_download <- GET(query_download, authenticate(user, password), user_agen
 # Create zip file
 zipfile = file.path(downloadDir,"download.zip")
 #folder where .zip is going to be extracted
-exdir = "downloads" 
+exdir = downloadDir 
 
 #open connection to write data in download folder
 filecon <- file(zipfile, "wb") 
@@ -75,6 +75,7 @@ unzip(zipfile=zipfile, overwrite = TRUE,
 )
 
 junk = dir(exdir, pattern = ".do|Pdf|Questionnaire")
+
 
 
 #file.remove(paste(exdir, junk, sep = "/"))
