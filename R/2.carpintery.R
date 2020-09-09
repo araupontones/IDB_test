@@ -25,6 +25,10 @@ df_raw = import(file.path(downloadDir, questionnaire)) %>%
          m_oxigeno = manejo__1,
          m_isotonicas = manejo__2,
          m_tansfusion  = manejo__3) %>%
+  
+  #drop empty questionnaires
+   mutate(empty_answers = apply(., MARGIN = 1, function(x) sum(is.na(x)))) %>%
+  filter(empty_answers < 14) %>%
   #Sum all the criterios
   mutate(criterios_realizados = rowSums(.[str_detect(names(.), "m_")]),
          criterios_realizados = factor(criterios_realizados,
@@ -38,3 +42,5 @@ source("R/3.grafica_criterios.R")
 source("R/4.grafica_monitoria.R")
 
 
+chart_criterios
+chart_monitoria

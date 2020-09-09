@@ -23,6 +23,7 @@ chart_criterios = ggplot(data = df_chart_criterios,
   tema
 
 
+chart_criterios
 #Texto para la grafica
 txt_total_casos = nrow(df_raw)
 txt_titulo_chart_criterios = paste("Distribucion del numero de criterios realizados en cada uno de los", 
